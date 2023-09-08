@@ -20,7 +20,7 @@ public:
 
 int main()
 {
-    Rectangle r = Rectangle(6,6);
+    Rectangle r(6,6);
     r.area();
     return 0;
 }
