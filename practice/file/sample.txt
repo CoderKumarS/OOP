@@ -1,0 +1,3 @@
+Hello, World!
+This is a sample file.
+File handling in C++ is easy.
