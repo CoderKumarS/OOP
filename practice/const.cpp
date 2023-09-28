@@ -156,3 +156,24 @@
 //     s2.displayInfo();
 //     return 0;
 // }
+// #include <iostream>
+// #include <fstream>
+// int main()
+// {
+//     std::fstream file(
+//         "data.txt", std::ios::in | std::ios::out);
+//     if (file.is_open())
+//     {
+//         int number;
+//         file >> number;
+//         file.seekp(0);
+//         number *= 2;
+//         file << number;
+//         file.close();
+//     }
+//     else
+//     {
+//         std::cout << "File not found." << std::endl;
+//     }
+//     return 0;
+// }
