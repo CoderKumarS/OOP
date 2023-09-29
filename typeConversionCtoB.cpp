@@ -33,6 +33,7 @@ Student::Student(int a, float b)
 
 Student::~Student()
 {
+    cout<<"End......";
 }
 
 int main()
