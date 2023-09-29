@@ -15,7 +15,7 @@ private:
 public:
     Student(int a, float b);
     ~Student();
-    operator int()
+    operator int()//conversion operator function
     {
         return rollNo;
     }
