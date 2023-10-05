@@ -13,7 +13,7 @@ void student :: get_no(int a){
 void student :: put_no(){
     cout<<"Roll no. is "<<roll_no<<endl;
 }
-class test: public student{
+class test: public student{//first level derivation
     protected:
     float sub1, sub2;
     public:
@@ -24,15 +24,12 @@ void test::get_marks (float x, float y) {
     sub1=x;  //this line of code will be executed only if the class name is given in the constructor call
     sub2=y;  //this line of code will be executed only if the class name is given in the constructor call
 }
-// void test::put_marks(){
-//     float total;
-// }
 void test::put_marks() {
-    std::cout << "Marks in sub1: " << sub1 << std::endl;
-    std::cout << "Marks in sub2: " << sub2 << std::endl;
+    cout << "Marks in sub1: " << sub1 << std::endl;
+    cout << "Marks in sub2: " << sub2 << std::endl;
 }
 
-class result : public test {
+class result : public test {//second level derivation
     float total;
 
 public:
