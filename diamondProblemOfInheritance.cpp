@@ -1,43 +1,55 @@
-#include<iostream>
+#include <iostream>
 using namespace std;
-class B{
-    protected:
+class B
+{
+protected:
     int x;
-    public:
-    void get_dataB(){
-        cout<<"\n Enter the value of x: ";
-        cin>>x;
+
+public:
+    void get_dataB()
+    {
+        cout << "\n Enter the value of x: ";
+        cin >> x;
     }
 };
 // class DB1:public B{//ambiguity error -diamond problem
-class DB1:public virtual B{//solution
-    protected:
+class DB1 : public virtual B
+{ // solution
+protected:
     int y;
-    public:
-    void get_dataDB1(){
-        cout<<"\n Enter value of y: ";
-        cin>>y;
+
+public:
+    void get_dataDB1()
+    {
+        cout << "\n Enter value of y: ";
+        cin >> y;
     }
 };
 // class DB2:public B{ //ambiguity error -diamond problem
-class DB2:public virtual B{
-    protected:
+class DB2 : public virtual B
+{
+protected:
     int z;
-    public:
-    void get_dataDB2(){
-        cout<<"\n Enter the value of z: ";
-        cin>>z;
+
+public:
+    void get_dataDB2()
+    {
+        cout << "\n Enter the value of z: ";
+        cin >> z;
     }
 };
-class D:public DB1,public DB2{
-    public:
-    void sum(){
+class D : public DB1, public DB2
+{
+public:
+    void sum()
+    {
         int result;
-        result=x+y+z;
-        cout<<"\n Result is: "<<result;
+        result = x + y + z;
+        cout << "\n Result is: " << result;
     }
 };
-int main(){
+int main()
+{
     D obj1;
     obj1.get_dataB();
     obj1.get_dataDB1();
