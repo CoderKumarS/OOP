@@ -26,8 +26,12 @@ public:
 };
 int main()
 {
+    Mammals M;
+    MarineAnimals MA;
     BlueWhale obj;
+    M.putdata();
+    MA.putdata();
+    obj.putdata();
     obj.Mammals::putdata();
     obj.MarineAnimals::putdata();
-    obj.putdata();
 }
