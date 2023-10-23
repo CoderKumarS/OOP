@@ -128,5 +128,13 @@ int main()
     F.putdata();
     F.Car::putdata();
     F.Vehicle::putdata();
+    
+    Audi A;
+    A.getdata();
+    A.Car::getdata();
+    A.Vehicle::getdata();
+    A.putdata();
+    A.Car::putdata();
+    A.Vehicle::putdata();
     return 0;
 }
