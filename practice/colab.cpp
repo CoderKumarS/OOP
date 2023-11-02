@@ -128,3 +128,144 @@
 
 //     return 0;
 // }
+// #include <iostream>
+// #include <iomanip>
+// using namespace std;
+// class Triangle {
+// public:
+//     Triangle(double b, double h) : base(b), height(h) {}
+//     double getArea() { return 0.5 * base * height; }
+// private:
+//     double base, height;
+// };
+
+// int main() {
+//     Triangle* t = new Triangle(4.0, 6.0);
+//     double result = t->getArea();
+//     delete t;
+//     std::cout << fixed << setprecision(1) << result;
+//     return 0;
+// }
+// #include <iostream>
+
+// int main() {
+//     int* ptr = new int[5]();
+//     std::cout << ptr[3];
+//     delete[] ptr;
+//     return 0;
+// }
+// #include <iostream>
+
+// int main() {
+//     int* ptr = new int[3];
+//     ptr[0] = 1;
+//     ptr[1] = 2;
+//     ptr[2] = 3;
+//     delete[] ptr;
+//     std::cout << ptr[1];
+//     return 0;
+// }
+// #include <iostream>
+// using namespace std;
+// class Cube {
+// public:
+//     Cube(double s) : side(s) {}
+//     double getVolume() { return side * side * side; }
+// private:
+//     double side;
+// };
+
+// int main() {
+//     Cube* c1 = new Cube(2.0);
+//     Cube* c2 = c1;
+//     delete c1;
+//     std::cout << c2->getVolume();
+//     return 0;
+// }
+// #include <iostream>
+// using namespace std;
+// class Car {
+// public:
+//     Car(const char* m) : model(m) {}
+//     const char* getModel() { return model; }
+// private:
+//     const char* model;
+// };
+
+// int main() {
+//     Car* c1 = new Car("Sedan");
+//     Car* c2 = new Car("SUV");
+//     delete c2;
+//     std::cout << c1->getModel();
+//     delete c1;
+//     return 0;
+// }
+// #include <iostream>
+// #include <cstring>
+
+// class House {
+// public:
+//     House() : address(new char[30]) {}
+//     virtual ~House() { delete[] address; }
+
+//     void SetAddress(const char* newAddress) {
+//         strcpy(address, newAddress);
+//     }
+
+//     void DisplayAddress() {
+//         std::cout << "Address: " << address;
+//     }
+
+// private:
+//     char* address;
+// };
+
+// int main() {
+//     House house;
+//     house.SetAddress("123 Main Street");
+//     house.DisplayAddress();
+//     return 0;
+// }
+// #include <iostream>
+
+// int main() {
+//     int* ptr = new int;
+//     delete ptr;
+//     ptr = new int;
+//     std::cout << *ptr;
+//     return 0;
+// }
+// #include <iostream>
+
+// class Book {
+// public:
+//     Book() { data = new char[10]; }
+//     virtual ~Book() { delete[] data; }
+    
+// private:
+//     char* data;
+// };
+
+// int main() {
+//     Book* book = new Book();
+//     book = new Book();
+//     return 0;
+// }
+// #include <iostream>
+// int main() {
+//     int* ptr = new int(10);
+//     int* otherPtr = ptr;
+//     *otherPtr *= 2;
+//     delete ptr;
+//     std::cout << *otherPtr << std::endl;
+//     return 0;
+// }
+#include <iostream>
+
+int main() {
+    float* ptr = new float(3.14);
+    float* newPtr = ptr;
+    delete ptr;
+    std::cout << *newPtr;
+    return 0;
+}
