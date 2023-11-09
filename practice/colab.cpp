@@ -582,3 +582,25 @@
 //     ptr->display();
 //     return 0;
 // }
+
+#include<iostream>
+using namespace std;
+void show(int *p, int *q){
+    cout<<p<<" "<<q<<endl;
+    cout<<*p<<" "<<*q<<endl;
+    p=q;
+    cout<<p<<" "<<q<<endl;
+    cout<<*p<<" "<<*q<<endl;
+    *p=9;
+    cout<<p<<" "<<q<<endl;
+    cout<<*p<<" "<<*q<<endl;
+    *q=10;
+    cout<<p<<" "<<q<<endl;
+    cout<<*p<<" "<<*q<<endl;
+}
+int main(){
+    int a=6,b=7;
+    show(&a,&b);
+    cout<<a<<" "<<b;
+   return 0;
+}
