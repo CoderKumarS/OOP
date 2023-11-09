@@ -42,11 +42,3 @@ int main()
     b2.display();
     return 0;
 }
-
-// NETWORK LAYER: Routing : Routing Algorithm-Shortest path algorithm, Distance vector Routing, 
-// Link State routing, Routing algorithms, Unicast routing protocols
-// NETWORK LAYER: Congestion Control : Congestion Control Algorithms
-
-// TRANSPORT LAYER : Transport Layer Services, TCP- Header format and handshaking operation, 
-// UDP- Header format
-// APPLICATION LAYER : Domain Name System, E Mail, FTP
