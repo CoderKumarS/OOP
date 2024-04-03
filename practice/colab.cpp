@@ -583,24 +583,296 @@
 //     return 0;
 // }
 
-#include<iostream>
-using namespace std;
-void show(int *p, int *q){
-    cout<<p<<" "<<q<<endl;
-    cout<<*p<<" "<<*q<<endl;
-    p=q;
-    cout<<p<<" "<<q<<endl;
-    cout<<*p<<" "<<*q<<endl;
-    *p=9;
-    cout<<p<<" "<<q<<endl;
-    cout<<*p<<" "<<*q<<endl;
-    *q=10;
-    cout<<p<<" "<<q<<endl;
-    cout<<*p<<" "<<*q<<endl;
-}
-int main(){
-    int a=6,b=7;
-    show(&a,&b);
-    cout<<a<<" "<<b;
-   return 0;
-}
+// #include<iostream>
+// using namespace std;
+// void show(int *p, int *q){
+//     cout<<p<<" "<<q<<endl;
+//     cout<<*p<<" "<<*q<<endl;
+//     p=q;
+//     cout<<p<<" "<<q<<endl;
+//     cout<<*p<<" "<<*q<<endl;
+//     *p=9;
+//     cout<<p<<" "<<q<<endl;
+//     cout<<*p<<" "<<*q<<endl;
+//     *q=10;
+//     cout<<p<<" "<<q<<endl;
+//     cout<<*p<<" "<<*q<<endl;
+// }
+// int main(){
+//     int a=6,b=7;
+//     show(&a,&b);
+//     cout<<a<<" "<<b;
+//    return 0;
+// }
+
+// #include <iostream>
+// #include <exception>
+// using namespace std;
+
+// void myunexpected () {
+//     cout << "unexpected handler called\n";
+//     throw;
+// }
+// void myfunction () throw (int,bad_exception) {
+//     throw 'x';
+// }
+
+// int main (){
+//     set_unexpected (myunexpected);
+//     try {
+//         myfunction();
+//     }    
+//     catch (int) { 
+//         cout << "Caught int\n"; 
+//     }
+//     catch (bad_exception be) { 
+//         cout << "Caught bad_exception\n"; 
+//     }
+//     catch (...) { 
+//         cout << "Caught other exception \n"; 
+//     }
+//     return 0;
+// }
+
+// #include <iostream>
+// using namespace std;
+
+// class MyException {};
+
+// int main() {
+//     try {
+//         try {
+//             throw MyException();
+//         }
+//         catch (int x) {
+//             cout << "Inner catch block: " << x << endl;
+//         }
+//     }
+//     catch (MyException& e) {
+//         cout << "Outer catch block" << endl;
+//     }
+//     return 0;
+// }
+
+// #include <iostream>
+// #include <exception>
+// using namespace std;
+
+// class myexception : public exception{
+//     virtual const char* what() const throw(){
+//         return "Exception arised!";
+//     }
+// } myex;
+
+// int main(){
+//     try{
+//         throw myex;
+//     }
+//     catch (exception& e){
+//         cout << e.what() << endl;
+//     }
+//     return 0;
+// }
+
+// #include <iostream>
+// using namespace std;
+
+// void func() {
+//     try {
+//         throw 10;
+//     }
+//     catch (int x) {
+//         cout << "Caught exception: " << x << endl;
+//         throw;
+//     }
+// }
+
+// int main() {
+//     try {
+//         func();
+//     }
+//     catch (int x) {
+//         cout << "Caught exception in main: " << x << endl;
+//     }
+//     return 0;
+// }
+
+// #include <iostream>
+// using namespace std;
+
+// int main() {
+//     try {
+//         int* arr = new int[1000000000];
+//         cout << "Memory allocated successfully";
+//     }
+//     catch (bad_alloc&) {
+//         cout << "Error allocating memory" << endl;
+//     }
+//     return 0;
+// }
+
+// #include <iostream>
+// using namespace std;
+
+// void Funct();
+// int main(){
+//     try {
+//         Funct();
+//     }
+//     catch (double) {
+//         cerr << "Caught a double type..." << endl;
+//     }
+//     return 0;
+// }
+// void Funct(){
+//     throw 3;
+// }
+
+// #include <iostream>
+// #include <cstring> 
+// using namespace std;
+
+// int main() {
+//     try {
+//         char p[13]; 
+//         strcpy(p, "How are you?");
+//         cout << p << endl;
+//     }
+//     catch (exception& er) {}
+//     return 0;
+// }
+// #include <iostream>
+
+// void PrintSequence(int StopNum) {
+//     int Num = 1;
+//     while (true) {
+//         if (Num >= StopNum)
+//             throw Num;
+//         std::cout << Num << std::endl;
+//         Num++;
+//     }
+// }
+
+// int main() {
+//     try {
+//         try {
+//             PrintSequence(2);
+//         } catch (int ExNum) {
+//             std::cout << "Caught exception: " << ExNum << std::endl;
+//             // Rethrow the exception
+//             throw;
+//         }
+//     } catch (int ExNum) {
+//         std::cout << "Rethrown exception: " << ExNum << std::endl;
+//     }
+
+//     return 0;
+// }
+
+// #include <iostream>
+// using namespace std;
+
+// template <typename type>
+// class TestVirt{
+// public:
+//     virtual type TestFunct(type Var1){
+//         return Var1 * 2;
+//     }
+// };
+
+// int main(){
+//     TestVirt<int> Var1;
+//     cout << Var1.TestFunct(100) << endl;
+//     return 0;
+// }
+
+// #include <iostream>
+// using namespace std;
+
+// void foo() {
+//     try {
+//         throw runtime_error("Exception!");
+//     }
+//     catch (const exception& e) {
+//         cout << "Caught exception: " << e.what() << endl;
+//         throw;
+//     }
+// }
+
+// int main() {
+//     try {
+//         foo();
+//     }
+//     catch (const exception& e) {
+//         cout << "Caught rethrown exception: " << e.what() << endl;
+//     }
+//     return 0;
+// }
+
+// #include <iostream>
+// using namespace std;
+
+// void func() {
+//     try {
+//         throw 5;
+//     }
+//     catch (int x) {
+//         cout << "Caught int: " << x;
+//         throw x + 1;
+//     }
+// }
+
+// int main() {
+//     try {
+//         func();
+//     }
+//     catch (int x) {
+//         cout << " " << x;
+//     }
+//     return 0;
+// }
+
+// #include <iostream>
+// #include <string>
+// using namespace std;
+
+// template<typename T>
+// void print_mydata(T output){
+//     cout << output << endl;
+// }
+
+// int main(){
+//     double d = 5.5;
+//     string s("Hello World");
+//     print_mydata(d);
+//     print_mydata(s);
+//     return 0;
+// }
+
+// #include <iostream>
+// using namespace std;
+ 
+// template <class T, int max>
+// int arrMin(T arr[], int n)
+// {
+//    int m = max;
+//    for (int i = 0; i < n; i++)
+//       if (arr[i] < m)
+//          m = arr[i];
+ 
+//    return m;
+// }
+ 
+// int main()
+// {
+//    int arr1[]  = {10, 20, 15, 12};
+//    int n1 = sizeof(arr1)/sizeof(arr1[0]);
+ 
+//    char arr2[] = {1, 2, 3};
+//    int n2 = sizeof(arr2)/sizeof(arr2[0]);
+ 
+//    cout << arrMin<int, 10000>(arr1, n1) << endl;
+//    cout << arrMin<char, 256>(arr2, n2);
+//    return 0;
+// }
+
